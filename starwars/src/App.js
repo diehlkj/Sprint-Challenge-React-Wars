@@ -18,7 +18,7 @@ const App = () => {
     axios          
       .get(`https://swapi.co/api/people`) //response.data.next for next page... another .then tied to event listener? Come back to this...
       .then(response => {
-        setSwapi(response.data);
+        setSwapi(response.data.results);
         console.log(response);
       })
       .catch(error => console.log(`Uh oh... ${error}`));
@@ -27,6 +27,19 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      {swapi.map(data => {
+        return(
+          <Person 
+            name={data.name}
+            gender={data.gender}
+            birth_year={data.birth_year}
+            hair_color={data.hair_color}
+            eye_color={data.eye_color}
+            height={data.height}
+            mass={data.mass}
+          />
+        )
+      })}
     </div>
   );
 }
