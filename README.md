@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+    React is a JavaScript library that makes it easy to create dynamic and interactive UIs. React uses components written in JavaScript that can be composed together to create entire pages and applications, all while staying dynamic and updating with new information ass its passed in.  
+
 - [ ] What does it mean to _think_ in react?
 
+    Thinking in React is the way it makes one think about apps as they are built. Starting from a mockup or wireframe, you first break down the UI into a component hierarchy to determine what components you will need to create and how they relate to each other. From there you build a static version of the application with no functionality. This will give you all your components that render the final product, just without functionality. The next step would be to add functionality, and the first part of this is identifying what the minimum set of data your app needs to function is. Once the data is identified, you need to find the component that will own that slice of state. Once state is given a place to live, data needs to be passed down the hierarchy to the components that will render the different parts of state.
+
 - [ ] Describe state.
+    
+    State is an object that contains data and determines how a component renders and behaves. On a change of state, the new data will be rendered to the appropriate component.
 
 - [ ] Describe props.
+    
+    Props or properties are parameters passed from state to a child component 
 
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+    Side effects are anything happening outside the scope of a function being executed. These are events that happen after the DOM has been updated. We can sync side effects to a state or prop change using the effect hook. Also, we can prevent leaks by using the effect hooks second argument and pass it a state or prop to monitor for changes. Doing this will cause the effect to trigger only when it detects a change to said prop or state. Similarly, if we want the effect to only run once, an empty array can be passed in.
 
 ## Project Set Up
 
