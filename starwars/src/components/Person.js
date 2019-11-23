@@ -5,12 +5,22 @@ const Person = props => {
 
     const PersonContainer = styled.div`
         width: 400px;
-        background: #fff;
         padding: 10px;
         margin: 10px auto;
+        border: 5px solid rgba(133, 181, 254, 0.74);
+        border-radius: 40px 0px 40px 0px;
+        background-color: rgba(33, 117, 251, 0.71);
+        background-image:
+            radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%),
+            repeating-linear-gradient(90deg,rgba(223, 234, 251, 0.5),rgba(223, 234, 251, 0.5) 1px,rgba(123, 177, 211, 0) 1px,rgba(123, 177, 211, 0) 16px),
+            repeating-linear-gradient(0deg,rgba(223, 234, 251, 0.5),rgba(223, 234, 251, 0.5) 1px,rgba(123, 177, 211, 0) 1px,rgba(123, 177, 211, 0) 14px);
     `;
-    const Name = styled.h2``;
-    const Data = styled.p``;
+    const Name = styled.h2`
+        font-size: 26px
+    `;
+    const Data = styled.p`
+        font-size: 20px
+    `;
 
     return (
         <PersonContainer className="Person">
