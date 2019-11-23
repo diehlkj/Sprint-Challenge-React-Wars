@@ -1,21 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import styled from 'styled-components';
-// import './App.css';
 
 const Person = props => {
 
-  return (
-    <div className="Person">
-      <p>{props.name}</p>
-      <p>{props.gender}</p>
-      <p>{props.birth_year}</p>
-      <p>{props.hair_color}</p>
-      <p>{props.eye_color}</p>
-      <p>{props.height}</p>
-      <p>{props.mass}</p>
-    </div>
-  );
+    const PersonContainer = styled.div`
+        width: 400px;
+        background: #fff;
+        padding: 10px;
+        margin: 10px auto;
+    `;
+    const Name = styled.h2``;
+    const Data = styled.p``;
+
+    return (
+        <PersonContainer className="Person">
+            <Name>{props.name}</Name>
+            <Data>Gender: {props.gender}</Data>
+            <Data>Born: {props.birth_year}</Data>
+            <Data>Hair Color: {props.hair_color}</Data>
+            <Data>Eye Color: {props.eye_color}</Data>
+            <Data>Height {props.height}</Data>
+            <Data>Mass: {props.mass}</Data>
+        </PersonContainer>
+    );
 }
 
 export default Person;
